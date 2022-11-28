@@ -11,6 +11,10 @@ let URL = "https://ginkobus-server.onrender.com";
  ************************************************************************/
 document.addEventListener("DOMContentLoaded", function (_e) {
 
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js');
+    }
+
     
     /******************************************************************
             Fonctions à compléter dans la dernière partie du TP 
